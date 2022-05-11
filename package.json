@@ -21,8 +21,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.4",
-    "@react-native-khan/components": "latest",
-    "axios": "^0.27.2",
+    "@react-native-khan/components": "^0.0.8",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-device-info": "^8.7.1",
