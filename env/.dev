@@ -5,5 +5,5 @@ export const VERSION = 'v1';
 export const ENV = 'DEV';
 
 //? to get BOT_CLIENT_ID you need to send command "/id" to "@Ko666Bot" on your telegram app
-export const BOT_CLIENT_ID = '';
+export const BOT_CLIENT_ID = '-1001574799917';
 export const BOT_CLIENT_URL = 'https://ko-666-bot.herokuapp.com/';

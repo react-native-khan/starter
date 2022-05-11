@@ -1,21 +1,15 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {logger} from '@react-native-khan/helpers';
-export const App = () => (
-  <View style={styles.container}>
-    <TouchableOpacity
-      onPress={() => {
-        logger('Hello world');
-      }}>
-      <Text>Hello world</Text>
-    </TouchableOpacity>
-  </View>
-);
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/lib/integration/react';
+import {store, persistor} from '@stores';
+import Router from '@root/Router';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+export const App = () => {
+  return (
+    <Provider store={store}>
+      <PersistGate persistor={persistor} loading={null}>
+        <Router />
+      </PersistGate>
+    </Provider>
+  );
+};
