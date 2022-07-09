@@ -1,20 +1,15 @@
 import React from 'react';
-import {Layout} from '@react-native-khan/components';
-import {setLoading} from '@react-native-khan/helpers';
+import {Layout, setLoading} from '@react-native-khan/components';
 import {styles} from './styles';
 import {Text, TouchableOpacity} from 'react-native';
+import {api} from '@services';
 import {useDispatch} from 'react-redux';
-import {api} from '@api';
 export const InitScreen = () => {
   const dispatch = useDispatch();
 
   const submit = () => {
     dispatch(setLoading());
-    api.getData();
-    api.postData({
-      username: 'Farkhan25',
-      password: 'fone azmi',
-    });
+    api.geocode();
   };
 
   return (
